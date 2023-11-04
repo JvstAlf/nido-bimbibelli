@@ -1,0 +1,227 @@
+@media screen and (max-width: 1080px) and (orientation: landscape) {
+    .header h1 {
+        font-size: 8rem;
+    }
+
+    .next, .prev {
+        padding: 1rem;
+        font-size: 2.5rem;
+        top: calc(50% - 1rem);
+    }
+
+    .prev:hover, .next:hover {
+        backdrop-filter: none;
+        background: none;
+    }
+
+    iframe {
+        width: 75%;
+        height: auto;
+        aspect-ratio: 10/5;
+    }
+
+    .chi-sono {
+        height: 110vh;
+    }
+
+    .chi-sono p {
+        padding: 1rem 5%;
+    }
+}
+
+@media screen and (max-width: 1080px) and (orientation: portrait) {
+
+    .header h1 {
+        font-size: 7.5rem;
+        margin-top: 1rem;
+    }
+    
+    .header h2 {
+        font-size: 3rem;
+        margin-top: 2.5rem;
+    }
+
+    .header img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .navbar ul {
+        display: none;
+        position: relative;
+    }
+
+    .navbar-menu {
+        display: inline-block;
+        cursor: pointer;
+        z-index: 150;
+        position: fixed;
+    }
+
+    .side-navbar {
+        display: flex;
+        height: 100vh;
+        background-color: white;
+        width: 70%;
+        position: fixed;
+        z-index: 145;
+        transform: translateX(-100%);
+        transition: 0.5s;
+        padding: 7rem 2rem;
+    }
+
+    .side-navbar ul {
+        list-style-type: none;
+    }
+
+    .side-navbar ul li {
+        padding: 0.75rem;
+        background: linear-gradient(120deg, #68e195 0%, #8fd3f4 100%);
+        background-clip: text;
+        -webkit-background-clip: text; /* For older browsers */
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .move {
+        transform: translateX(0);
+    }
+
+    .io {
+        width: 50%;
+        height: auto;
+    }
+
+    .chi-sono h2 {
+        font-size: 2.5rem;
+    }
+
+    .chi-sono p {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    .galleria {
+        height: 50vh;
+    }
+
+    .carousel {
+        width: 85%;
+    }
+
+    .next, .prev {
+        padding: 1rem;
+        font-size: 2.5rem;
+        top: calc(50% - 2rem);
+    }
+
+    .prev:hover, .next:hover {
+        backdrop-filter: none;
+        background: none;
+    }
+
+    iframe {
+        width: 80%;
+        height: auto;
+        aspect-ratio: 10/8;
+    }
+
+    .dove-siamo p {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .dove-siamo p:first-child {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .header h1 {
+        font-size: 3rem;
+        margin-top: 1rem;
+    }
+    
+    .header h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .header img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .side-navbar ul li {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .io {
+        width: 50%;
+        height: auto;
+    }
+
+    .chi-sono h2 {
+        font-size: 1.5rem;
+    }
+
+    .chi-sono p {
+        font-size: 1rem;
+        line-height: normal;
+    }
+
+    .galleria {
+        height: 50vh;
+    }
+
+    .carousel {
+        width: 90%;
+    }
+
+    .next, .prev {
+        padding: 1rem;
+        top: calc(50% - 2rem)
+    }
+
+    .prev:hover, .next:hover {
+        backdrop-filter: none;
+        background: none;
+    }
+
+    .dove-siamo {
+        height: 70vh;
+    }
+
+    .dove-siamo p {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    iframe {
+        width: 80%;
+        aspect-ratio: 1/1;
+        height: auto;
+    }
+
+    .contatti p {
+        font-size: 2rem;
+    }
+
+    .contatti div {
+        flex-direction: column;
+        gap: 1.5rem;
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .chi-sono {
+        height: 120vh;
+    }
+}
