@@ -314,6 +314,7 @@ abbr {
 }
 
 iframe {
-    width: 1200px;
-    height: 600px;
+    width: 80%;
+    height: auto;
+    aspect-ratio: 10/6;
 }
