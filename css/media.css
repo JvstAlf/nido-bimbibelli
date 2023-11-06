@@ -1,3 +1,13 @@
+@media screen and (min-width: 850px) and (max-width: 1440px) and (orientation: portrait) {
+    .galleria {
+        height: 70vh;
+    }
+
+    .info {
+        height: 30vh;
+    }
+}
+
 @media screen and (max-width: 1080px) and (orientation: landscape) {
     .header h1 {
         font-size: 8rem;
@@ -15,9 +25,8 @@
     }
 
     iframe {
-        width: 75%;
-        height: auto;
-        aspect-ratio: 10/5;
+        height: 80%;
+        aspect-ratio: 2/1;
     }
 
     .chi-sono {
@@ -27,13 +36,18 @@
     .chi-sono p {
         padding: 1rem 5%;
     }
+
+    .carousel {
+        width: 80%;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 1080px) and (orientation: portrait) {
 
     .header h1 {
         font-size: 7.5rem;
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
     
     .header h2 {
@@ -90,11 +104,6 @@
         transform: translateX(0);
     }
 
-    .io {
-        width: 50%;
-        height: auto;
-    }
-
     .chi-sono h2 {
         font-size: 2.5rem;
     }
@@ -104,12 +113,17 @@
         line-height: 1.5rem;
     }
 
+    .chi-sono div:first-child {
+        padding: 2rem;
+    }
+
     .galleria {
         height: 50vh;
     }
 
     .carousel {
-        width: 85%;
+        width: 80%;
+        height: auto;
     }
 
     .next, .prev {
@@ -124,7 +138,7 @@
     }
 
     iframe {
-        width: 80%;
+        height: 100%;
         height: auto;
         aspect-ratio: 10/8;
     }
@@ -136,6 +150,11 @@
 
     .dove-siamo p:first-child {
         font-size: 1.75rem;
+    }
+
+    .contatti div:last-child {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
 
@@ -162,9 +181,12 @@
         font-size: 1.2rem;
     }
 
-    .io {
-        width: 50%;
-        height: auto;
+    .chi-sono div:first-child {
+        height: 25%;
+    }
+
+    .chi-sono div:last-child {
+        height: 75%;
     }
 
     .chi-sono h2 {
@@ -174,6 +196,7 @@
     .chi-sono p {
         font-size: 1rem;
         line-height: normal;
+        padding: 1rem;
     }
 
     .galleria {
@@ -181,7 +204,12 @@
     }
 
     .carousel {
-        width: 90%;
+        height: auto;
+        width: 80%;
+    }
+
+    .info {
+        height: 100vh;
     }
 
     .next, .prev {
@@ -204,7 +232,7 @@
     }
 
     iframe {
-        width: 80%;
+        height: 80%;
         aspect-ratio: 1/1;
         height: auto;
     }
@@ -217,11 +245,5 @@
         flex-direction: column;
         gap: 1.5rem;
         font-size: 1.25rem;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .chi-sono {
-        height: 120vh;
     }
 }

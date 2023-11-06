@@ -205,7 +205,7 @@ a {
 }
 
 .carousel {
-    height: 70%;
+    width: 75%;
     overflow: hidden;
     position: relative;
     aspect-ratio: 2/1;
