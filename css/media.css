@@ -2,10 +2,6 @@
     .galleria {
         height: 70vh;
     }
-
-    .info {
-        height: 30vh;
-    }
 }
 
 @media screen and (max-width: 1080px) and (orientation: landscape) {
@@ -91,7 +87,8 @@
 
     .side-navbar ul li {
         padding: 0.75rem;
-        background: linear-gradient(120deg, #68e195 0%, #8fd3f4 100%);
+        background: var(--gradient);
+        background: var(--webkit-gradient);
         background-clip: text;
         -webkit-background-clip: text; /* For older browsers */
         color: transparent;
@@ -111,10 +108,16 @@
     .chi-sono p {
         font-size: 1.5rem;
         line-height: 1.5rem;
+        padding: 2.5rem;
     }
 
     .chi-sono div:first-child {
         padding: 2rem;
+        height: 30%;
+    }
+
+    .chi-sono div:last-child {
+        height: 70%;
     }
 
     .galleria {
@@ -143,13 +146,27 @@
         aspect-ratio: 10/8;
     }
 
-    .dove-siamo p {
-        font-size: 1.25rem;
+    .dove-siamo div:first-child {
+        height: 30%;
+        gap: 2.5rem;
+    }
+
+    .dove-siamo div:last-child {
+        height: 70%;
+    }
+
+    .dove-siamo a {
+        font-size: 1.75rem;
         text-align: center;
     }
 
-    .dove-siamo p:first-child {
-        font-size: 1.75rem;
+    .location {
+        width: 80%;
+        padding: 1.5rem;
+    }
+
+    .dove-siamo p {
+        font-size: 2rem;
     }
 
     .contatti div:last-child {
@@ -183,10 +200,12 @@
 
     .chi-sono div:first-child {
         height: 25%;
+        padding: 1rem;
     }
 
     .chi-sono div:last-child {
         height: 75%;
+        padding: 1rem;
     }
 
     .chi-sono h2 {
@@ -196,11 +215,11 @@
     .chi-sono p {
         font-size: 1rem;
         line-height: normal;
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     .galleria {
-        height: 50vh;
+        height: 40vh;
     }
 
     .carousel {
@@ -209,7 +228,9 @@
     }
 
     .info {
-        height: 100vh;
+        padding: 5rem 2.5rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
     }
 
     .next, .prev {
@@ -226,9 +247,14 @@
         height: 70vh;
     }
 
-    .dove-siamo p {
+    .dove-siamo p, .dove-siamo a {
         font-size: 1.25rem;
         text-align: center;
+    }
+
+    .location {
+        width: 80%;
+        padding: 1rem;
     }
 
     iframe {
@@ -245,5 +271,17 @@
         flex-direction: column;
         gap: 1.5rem;
         font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-height: 750px) {
+    .chi-sono {
+        height: 115vh;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .chi-sono {
+        height: 125vh;
     }
 }

@@ -4,8 +4,15 @@
     box-sizing: border-box;
 }
 
+:root {
+    --gradient: linear-gradient(120deg, #1CB5E0, #000046);
+    --webkit-gradient: -webkit-linear-gradient(120deg, #1CB5E0, #000046);
+}
+
 body, html {
-    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background: #000436;  /* fallback for old browsers */
+    background: var(--gradient);
+    background: var(--webkit-gradient);
     color: white;
     height: 100%;
     width: 100%;
@@ -26,7 +33,7 @@ h1, h2, p {
 }
 
 ::selection {
-    color: rgb(69, 69, 69);
+    color: #000552;
     background-color: white;
 }
 
@@ -118,7 +125,8 @@ h1, h2, p {
   .change .bar1 {
     transform: translate(0, 11px) rotate(-45deg);
     box-shadow: none;
-    background: linear-gradient(120deg, #68e195 0%, #8fd3f4 100%);
+    background: var(--gradient);
+    background: var(--webkit-gradient);
   }
   
   .change .bar2 {opacity: 0;}
@@ -126,7 +134,8 @@ h1, h2, p {
   .change .bar3 {
     transform: translate(0, -11px) rotate(45deg);
     box-shadow: none;
-    background: linear-gradient(120deg, #68e195 0%, #8fd3f4 100%);
+    background: var(--gradient);
+    background: var(--webkit-gradient);
   }
 
 .chi-sono {
@@ -154,7 +163,7 @@ a {
 .chi-sono div:first-child {
     display: flex;
     width: 100%;
-    height: 35%;
+    height: 40%;
     justify-content: center;
     align-items: center;
 }
@@ -162,15 +171,18 @@ a {
 .chi-sono div:last-child {
     display: flex;
     width: 100%;
-    height: 65%;
-    justify-content: space-evenly;
+    height: 60%;
+    justify-content: flex-start;
+    padding: 5rem 0;
+    gap: 2rem;
     align-items: center;
     flex-direction: column;
 }
 
 .chi-sono h2 {
-    font-size: 2rem;
-    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    font-size: 2.5rem;
+    background: var(--gradient);
+    background: var(--webkit-gradient);
     background-clip: text;
     -webkit-background-clip: text; /* For older browsers */
     color: transparent;
@@ -179,7 +191,8 @@ a {
 
 .chi-sono p {
     width: 100%;
-    background: linear-gradient(120deg, #68e195 0%, #8fd3f4 100%);
+    background: var(--gradient);
+    background: var(--webkit-gradient);
     background-clip: text;
     -webkit-background-clip: text; /* For older browsers */
     color: transparent;
@@ -192,7 +205,7 @@ a {
 }
 
 .chi-sono h2::selection, .chi-sono p::selection, .contatti p::selection {
-    background: #68e1b5;
+    background: #3265a3;
     -webkit-text-fill-color: white;
 }
 
@@ -236,7 +249,7 @@ a {
     flex-direction: column;
 }
 
-.dove-siamo p {
+.dove-siamo p, .dove-siamo a {
     font-weight: 700;
     font-size: 1.5rem;
 }
@@ -259,6 +272,37 @@ a {
     align-items: center;
 }
 
+.location {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0.5rem 1rem;
+}
+
+.location:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.location span {
+    padding: 1rem;
+    border-radius: 1rem;
+    background: var(--gradient);
+    background: var(--webkit-gradient);
+    background-clip: text;
+    -webkit-background-clip: text; /* For older browsers */
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    background-position: center;
+}
+
+.location span::selection {
+    -webkit-text-fill-color: white;
+    background: #3265a3;
+}
+
 iframe {
     width: 70%;
     height: 75%;
@@ -267,16 +311,15 @@ iframe {
 }
 
 .info {
-    height: 50vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 1.5rem;
-    padding: 1rem 3rem;
+    padding: 2rem 8rem;
     text-align: justify;
-    line-height: 1.25rem;
+    line-height: 1.5rem;
 }
 
 .contatti {
@@ -292,11 +335,14 @@ iframe {
 .contatti > p {
     font-size: 2.5rem;
     font-weight: 700;
-    background: linear-gradient(120deg, #68e195 0%, #8fd3f4 100%);
+    background: var(--gradient);
+    background: var(--webkit-gradient);
     background-clip: text;
     -webkit-background-clip: text; /* For older browsers */
     color: transparent;
     -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    background-position: center;
 }
 
 abbr {
@@ -318,11 +364,14 @@ b {
 .contatti a {
     border-bottom: 2px solid transparent;
     transition: 0.2s;
-    background: linear-gradient(120deg, #68e195 0%, #8fd3f4 100%);
+    background: var(--gradient);
+    background: var(--webkit-gradient);
     background-clip: text;
     -webkit-background-clip: text; /* For older browsers */
     color: transparent;
     -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    background-position: center;
     font-weight: 600;
     line-height: 2rem;
 }
@@ -333,7 +382,7 @@ b {
 }
 
 .contatti a:hover {
-    border-bottom: 2px solid #68e195;
+    border-bottom: 2px solid #3265a3;
 }
 
 .prev, .next {
@@ -364,7 +413,8 @@ b {
     border-radius: 1rem 0 0 1rem;
 }
 
-.contatti a::selection, .contatti abbr::selection {
-    background-color: #68e195;
+.contatti a::selection, .contatti abbr::selection, .contatti span::selection {
+    background: #3265a3;
     color: white;
+    -webkit-text-fill-color: white;
 }
